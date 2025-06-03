@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemples CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* 1) Texte sur image */
+    .image-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+    }
+
+    .text-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 8px 15px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    /* 2) Menu déroulant */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .dropbtn {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* 3) Grille d’images */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* 4) Icône + lien */
+    .icon-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
+    .icon-link i {
+      margin-right: 8px;
+      font-size: 20px;
+      color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 1) Texte sur image -->
+  <div class="image-container">
+    <img src="img0.jpeg" alt="Image d'un pont">
+    <div class="text-overlay">pont blanc</div>
+  </div>
+
+  <br>
+
+  <!-- 2) Menu déroulant -->
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Accueil</a>
+      <a href="#">Galerie</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <!-- 3) Grille de photos -->
+  <div class="photo-grid">
+    <img src="photo1.jpg" alt="Photo 1">
+    <img src="photo2.jpg" alt="Photo 2">
+    <img src="photo3.jpg" alt="Photo 3">
+    <img src="photo4.jpg" alt="Photo 4">
+  </div>
+
+  <!-- 4) Icône + lien -->
+  <a href="#" class="icon-link">
+    <i class="fas fa-home"></i> Accueil
+  </a>
+
+</body>
+</html>
